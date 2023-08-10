@@ -1,0 +1,189 @@
+body {
+    background-color: #eee;
+    margin: 0;
+    font-family: arial, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.content-wrap {
+    max-width: 1170px;
+    margin: 0 auto;
+    background-color: #fff;
+    min-height: 100vh;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+    margin: 0 auto;
+}
+
+ul > li {
+    display: block;
+}
+
+ul > li > a {
+    color: #000 !important;
+    text-decoration: none;
+}
+
+form {
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+input, select, textarea {
+    display: block;
+    margin-bottom: 20px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 300px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+textarea {
+    height: 160px;
+    resize: none;
+}
+
+textarea::placeholder {
+    color: #000;
+}
+
+select:active, select:hover, select:focus,
+textarea:active, textarea:hover, textarea:focus,
+input:active, input:hover, input:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+#mail-error{
+    color: red;
+    text-align: center;
+}
+#new-user-added{
+    color: green;
+    text-align: center;
+}
+.active{
+    font-weight: 700;
+}
+ul.user-list{
+    padding-top: 30px;
+    padding-left: 0;
+    margin: 0 auto;
+    width: 300px;
+    display: block;
+}
+ul.user-list li{
+    width: 300px;
+    display: block;
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #777;
+    display: block;
+}
+ul.user-list li:last-child{
+    border-bottom: none;
+}
+ul.user-list li a{
+    width: 250px;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    transition: 0.5s;
+    color: #999 !important;
+}
+ul.user-list li a:hover{
+    color: black !important;
+}
+.form-delete-user input{
+    color: #fff;
+    background-color: red;
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    right: 0;
+    top: 5px;
+    border-radius: 5px;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+ul.departments-list{
+    padding-top: 30px;
+    padding-left: 0;
+    margin: 0 auto;
+    width: 300px;
+    display: block;
+}
+ul.departments-list li{
+    width: 300px;
+    display: block;
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #777;
+    display: block;
+}
+ul.departments-list li:last-child{
+    border-bottom: none;
+}
+ul.departments-list li a{
+    width: 250px;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    transition: 0.5s;
+    color: #999 !important;
+}
+ul.departments-list li a:hover {
+    color: black !important;
+}
+.form-delete-department input{
+    color: #fff;
+    background-color: red;
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    right: 0;
+    top: 5px;
+    border-radius: 5px;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+.department-message{
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
