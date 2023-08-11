@@ -1,12 +1,12 @@
 <?php
-include_once 'config.php';
-include_once 'models/department-model.php';
+include_once '../config.php';
+include_once '../models/department-model.php';
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <title>Test app</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
 <div class="content-wrap">
@@ -14,7 +14,7 @@ include_once 'models/department-model.php';
     <ul class="top-menu">
         <li><a href="users.php">Users</a></li>
         <li><a href="departments.php" class="active">Departments</a></li>
-        <li><a href="index.php">Add User</a></li>
+        <li><a href="add-user.php">Add User</a></li>
     </ul>
     <form class="add-neq-department" method="POST">
         <input type="text">
