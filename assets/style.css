@@ -77,14 +77,6 @@ input:active, input:hover, input:focus {
     outline: 0;
     outline-offset: 0;
 }
-#mail-error{
-    color: red;
-    text-align: center;
-}
-#new-user-added{
-    color: green;
-    text-align: center;
-}
 .active{
     font-weight: 700;
 }

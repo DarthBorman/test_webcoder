@@ -1,14 +1,12 @@
 <?php
 class UserModel{
-    public function addNewUser(){
-        echo '<script>if(document.getElementById("mail-error")){document.getElementById("mail-error").remove()};</script>';
-        echo '<script>if(document.getElementById("new-user-added")){document.getElementById("new-user-added").remove()};</script>';
+    public function add(){
         $email = $_POST['email'];
         $sql = $GLOBALS['pdo']->query('SELECT email FROM users');
         while ($row = $sql->fetch())
         {
             if ($email == $row['email']){
-                echo '<p id="mail-error">Error! This email is already in use</p>';
+                echo '<script>alert("Error! This email is already in use")</script>';
                 return;
             }
         }
@@ -20,11 +18,22 @@ class UserModel{
         $selected_department = (int)$selected_department;
         $sql = "INSERT INTO users (email, name, address, phone, comment, id_department) Values ('$email', '$name', '$address', '$phone', '$comment', '$selected_department')";
         $GLOBALS['pdo']->exec($sql);
-        echo '<p id="new-user-added">New user added successfully!!!</p>';
+        echo '<script>alert("New user added successfully!!")</script>';
     }
-    public function DeleteUser($my_id){
+    public function delete($my_id){
         $sql = "DELETE FROM users WHERE id = '$my_id'";
         $GLOBALS['pdo']->exec($sql);
         header("Refresh:0");
+        echo '<script>alert("Removal was successful!!")</script>';
+    }
+    public function get(){
+        $sql = $GLOBALS['pdo']->query('SELECT name, id FROM users');
+        while ($row = $sql->fetch())
+        {
+            $arr_id[] = $row['id'];
+            $arr_name[] = $row['name'];
+        }
+        $myClass = new UserController;
+        $myClass->delivery($arr_id, $arr_name);
     }
 }

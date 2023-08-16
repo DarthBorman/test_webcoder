@@ -1,6 +1,5 @@
 <?php
-include_once '../config.php';
-include_once '../models/department-model.php';
+include_once '../index.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,53 +13,30 @@ include_once '../models/department-model.php';
     <ul class="top-menu">
         <li><a href="users.php">Users</a></li>
         <li><a href="departments.php" class="active">Departments</a></li>
-        <li><a href="add-user.php">Add User</a></li>
+        <li><a href="add_user.php">Add User</a></li>
     </ul>
     <form class="add-neq-department" method="POST">
-        <input type="text">
-        <input type="submit" name="add-new-department" value="Add new department">
+        <input type="text" name="add-new-department">
+        <input type="submit"  value="Add new department">
     </form>
     <ul class="departments-list">
         <?php
-        $sql = $GLOBALS['pdo']->query('SELECT name, id FROM departments');
-        while ($row = $sql->fetch())
-        {
-            ?>
-            <li>
-                <a href="#"><?php echo $row['name'];?></a>
-                <form method="post" class="form-delete-department">
-                    <input type="hidden" name="hidden-input" value="<?php echo $row['id'];?>">
-                    <input type="submit" name="delete-department" value="Delete">
-                </form>
-
-            </li>
-            <?
-        }
+        $myClass = new departmentController;
+        $myClass->get('departments');
         ?>
     </ul>
     <p class="department-message">
         <?php
-        if (isset($_POST['delete-department'])) {
-            $my_id = $_POST['hidden-input'];
-            $myClass =  new DepartmentModel;
-            $myClass->delDepartment($my_id);
-        }
+        $myClass = new departmentController;
+        $myClass->delete();
         ?>
     </p>
     <p class="department-message">
         <?php
-        if (isset($_POST['add-new-department'])) {
-            echo 'ok';
-        }
+        $myClass = new departmentController;
+        $myClass->add();
         ?>
     </p>
 </div>
-<?php
-if (isset($_POST['delete-department'])) {
-    $my_id = $_POST['hidden-input'];
-    $myClass =  new DepartmentModel;
-    $myClass->delDepartment($my_id);
-}
-?>
 </body>
 </html>
