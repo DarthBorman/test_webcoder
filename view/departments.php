@@ -1,5 +1,5 @@
 <?php
-include_once '../index.php';
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,9 +11,9 @@ include_once '../index.php';
 <div class="content-wrap">
     <h1>Departments</h1>
     <ul class="top-menu">
-        <li><a href="users.php">Users</a></li>
-        <li><a href="departments.php" class="active">Departments</a></li>
-        <li><a href="add_user.php">Add User</a></li>
+        <li><a href="/users">Users</a></li>
+        <li><a href="/departments" class="active">Departments</a></li>
+        <li><a href="/add-user">Add User</a></li>
     </ul>
     <form class="add-neq-department" method="POST">
         <input type="text" name="add-new-department">

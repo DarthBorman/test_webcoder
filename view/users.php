@@ -1,5 +1,5 @@
 <?php
-include_once '../index.php';
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,9 +11,9 @@ include_once '../index.php';
 <div class="content-wrap">
     <h1>Users</h1>
     <ul class="top-menu">
-        <li><a href="users.php" class="active">Users</a></li>
-        <li><a href="departments.php">Departments</a></li>
-        <li><a href="add_user.php">Add User</a></li>
+        <li><a href="/users" class="active">Users</a></li>
+        <li><a href="/departments">Departments</a></li>
+        <li><a href="/add-userp">Add User</a></li>
     </ul>
     <ul class="user-list">
         <?php

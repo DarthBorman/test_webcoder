@@ -1,6 +1,6 @@
 <?php
-include_once '../models/department_model.php';
-class departmentController{
+
+class DepartmentController{
 
     public function delete(){
         if (isset($_POST['delete-department'])) {
@@ -10,7 +10,7 @@ class departmentController{
         }
     }
     public function get($page_name){
-        $myclass = new departmentModel;
+        $myclass = new DepartmentModel;
         $myclass->get($page_name);
     }
     public function deliveryDepartments($arr_id, $arr_name, $page_name ){

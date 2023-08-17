@@ -1,6 +1,6 @@
 <?php
 
-class departmentModel
+class DepartmentModel
 {
     public function get($page_name)
     {
@@ -9,7 +9,7 @@ class departmentModel
             $arr_id[] = $row['id'];
             $arr_name[] = $row['name'];
         }
-        $myclass = new departmentController;
+        $myclass = new DepartmentController;
         $myclass->deliveryDepartments($arr_id, $arr_name, $page_name);
     }
 

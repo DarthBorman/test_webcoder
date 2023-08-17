@@ -5,7 +5,7 @@
       <paths name="Serv">
         <serverdata>
           <mappings>
-            <mapping deploy="/sites/den-meta.s-host.net/test-webcoder" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/sites/test-webcoder.s-host.net" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>

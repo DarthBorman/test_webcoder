@@ -1,5 +1,5 @@
 <?php
-include_once '../index.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -12,9 +12,9 @@ include_once '../index.php';
 <div class="content-wrap">
     <h1>Add new user</h1>
     <ul class="top-menu">
-        <li><a href="users.php">Users</a></li>
-        <li><a href="departments.php">Departments</a></li>
-        <li><a href="add_user.php" class="active">Add User</a></li>
+        <li><a href="/users">Users</a></li>
+        <li><a href="/departments">Departments</a></li>
+        <li><a href="/add-user" class="active">Add User</a></li>
     </ul>
     <form method="post">
         <input required type="email" name="email" placeholder="email">
@@ -25,7 +25,7 @@ include_once '../index.php';
             <textarea required name="comment"></textarea>
         </label>
         <?php
-        $myClass = new departmentController;
+        $myClass = new DepartmentController;
         $myClass->get('add-user');
         ?>
         <input type="submit" name="add-user" value="Add new user"/>

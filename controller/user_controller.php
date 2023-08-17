@@ -1,5 +1,4 @@
 <?php
-include_once '../models/user_model.php';
 class UserController
 {
     public function add()
